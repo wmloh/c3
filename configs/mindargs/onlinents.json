@@ -1,0 +1,8 @@
+{
+    "init": {
+        "lamdba": 1,
+        "nu": 1,
+        "hidden": 100,
+        "sliding_window": 2000
+    }
+}

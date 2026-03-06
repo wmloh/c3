@@ -1,0 +1,26 @@
+{
+    "init": {
+        "layer_nums": [
+            null,
+            512,
+            128
+        ],
+        "sigma": 0.6,
+        "weight_factor": 1
+    },
+    "fit": {
+        "loss_coef": {
+            "bce": 1,
+            "ece": 0.01
+        },
+        "epochs": 20,
+        "lr": 0.001,
+        "usage_ratio": 0.1,
+        "base_ratio": 0.01,
+        "val_base_ratio": 0.01,
+        "explr_gamma": 0.9,
+        "batch_size": 32
+    },
+    "drop_prob": 0.2,
+    "drop_schedule": null
+}

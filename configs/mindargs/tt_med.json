@@ -1,0 +1,20 @@
+{
+    "init": {
+        "user_encoder_layers": [
+            null,
+            64,
+            64
+        ],
+        "arm_encoder_layers": [
+            null,
+            256,
+            64
+        ]
+    },
+    "fit": {
+        "batch_size": 32,
+        "epochs": 40,
+        "lr": 0.0008,
+        "plot": false
+    }
+}
