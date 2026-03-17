@@ -2,6 +2,8 @@
 
 *Official GitHub repository for the implementation of **A Practical Algorithm for Feature-Rich, Non-Stationary Bandit Problems**.*
 
+📖 You can read our paper [here](https://openreview.net/pdf?id=tRbwfej9uY).
+
 ## Setup
 
 **MIND dataset** Download the MIND dataset [here](https://msnews.github.io/). In our paper, we use only the full datasets, i.e. `MINDlarge_train` and `MINDlarge_dev`. Place them in `$ROOT/data`. For example, the `behaviors.tsv` should be located at `$ROOT/data/MINDlarge_train/behaviors.tsv`
@@ -50,3 +52,20 @@ If you have run the launch scripts with the default settings, you should be able
 1.  The variance of IWKR estimate computation (in the `forward` function) has been corrected but the change causes a slight deviation in the results. Hence, we leave it unchanged in the legacy version. The Thompson sampling computation (in the `infer_batch` function) is correct and unchanged. 
 2.  The `pick_best_val` implementation in `C3.fit` is incorrect in the version that was used at the submission of the paper. The error has been marked with a `TODO` comment. The current version rectifies this part of the implementation.
 3.  The current version includes a minimum alpha and beta value threshold (specified in the parameter `min_alpha_beta`). The default value is 0.1. This helps enforce desirable properties. For example, when a query is far from all reference points, the minimum threshold ensures the standard deviation of the Beta posterior remains high and the density function being more uniform. To disable this, simply set the value to 0.
+
+## Citation
+
+If you used $C_3$, please include the following citation:
+
+```
+@article{
+    loh2026a,
+    title={A Practical Algorithm for Feature-Rich, Non-Stationary Bandit Problems},
+    author={Wei Min Loh and Sajib Kumer Sinha and Ankur Agarwal and Pascal 
+    Poupart},
+    journal={Transactions on Machine Learning Research},
+    issn={2835-8856},
+    year={2026},
+    url={https://openreview.net/forum?id=tRbwfej9uY}
+}
+```
